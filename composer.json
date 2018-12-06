@@ -1,5 +1,5 @@
 {
-  "name": "mops1k/monolog-service-logger-bundle",
+  "name": "mops1k/monolog-service-level-bundle",
   "description": "Bundle which allow service handlers in monolog to handle log level from monolog configuration",
   "keywords": [
     "symfony",
