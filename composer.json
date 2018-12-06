@@ -1,0 +1,34 @@
+{
+  "name": "mops1k/monolog-service-logger-bundle",
+  "description": "Bundle which allow service handlers in monolog to handle log level from monolog configuration",
+  "keywords": [
+    "symfony",
+    "api",
+    "rest",
+    "doctrine"
+  ],
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aleksandr Kvintilyanov",
+      "email": "bednyj.mops@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3",
+    "symfony/framework-bundle": "~3.0|~4.0",
+    "symfony/monolog-bundle": "~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Monolog\\Service\\LoggerBundle\\": "."
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}
