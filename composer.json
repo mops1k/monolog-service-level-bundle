@@ -3,9 +3,7 @@
   "description": "Bundle which allow service handlers in monolog to handle log level from monolog configuration",
   "keywords": [
     "symfony",
-    "api",
-    "rest",
-    "doctrine"
+    "monolog"
   ],
   "type": "symfony-bundle",
   "license": "MIT",
