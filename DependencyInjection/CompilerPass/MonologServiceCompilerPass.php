@@ -36,11 +36,23 @@ class MonologServiceCompilerPass implements CompilerPassInterface
                 }
 
                 $definition = clone $container->getDefinition($handler['id']);
-                $definition->addMethodCall('setLevel', [$handler['level']]);
+                $definition->addMethodCall('setLevel', [$this->levelToMonologConst($handler['level'])]);
 
                 $container->addDefinitions([$serviceAlias => $definition]);
                 $container->setAlias($handlerAlias, $serviceAlias);
             }
         }
+    }
+
+    /**
+     * levelToMonologConst
+     *
+     * @param $level
+     *
+     * @return int|mixed
+     */
+    private function levelToMonologConst($level)
+    {
+        return is_int($level) ? $level : constant('Monolog\Logger::'.strtoupper($level));
     }
 }
